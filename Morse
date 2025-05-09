@@ -12,3 +12,10 @@ using namespace std;
 int main() {
     // Letters A-Z in order; used to match input characters
     string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    // Parallel array holds Morse equivalents by index
+    string morse[] = {
+        ".-","-...","-.-.","-..",".","..-.","--.","....","..",
+        ".---","-.-",".-..","--","-.","---",".--.","--.-",".-.",
+        "...","-","..-","...-",".--","-..-","-.--","--.."
+    };
