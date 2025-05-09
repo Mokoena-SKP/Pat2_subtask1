@@ -22,3 +22,22 @@ int main() {
 
     string input, fullMorse = "";
     getline(cin, input); // Accept full input line from user
+ string input, fullMorse = "";
+    getline(cin, input); // Accept full input line from user
+
+    for (int i = 0; i < input.size(); i++) {
+        char ch = toupper(input[i]); // Treat input as uppercase
+        // Only process letters — skip numbers, punctuation, space
+        for (int j = 0; j < 26; j++) {
+            if (ch == letters[j]) {
+                cout << ch << " -> " << morse[j] << endl; // Per-letter output
+                fullMorse += morse[j];
+                fullMorse += " "; // Add space to separate codes
+            }
+        }
+    }
+
+    // After individual translation, show full Morse string
+    cout << endl << fullMorse << endl;
+    return 0;
+}
