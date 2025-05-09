@@ -4,3 +4,11 @@
 //It should accept user input, so use "cin"
 //It should display output, so use "cout"
 //TMaybe use a dictionary to pair values from the Roman alphabet to Morse code 
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    // Letters A-Z in order; used to match input characters
+    string letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
