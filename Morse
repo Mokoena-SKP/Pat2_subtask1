@@ -1,0 +1,6 @@
+//Morse code function
+
+//Aim is to create a morse code tranlastor
+//It should accept user input, so use "cin"
+//It should display output, so use "cout"
+//TMaybe use a dictionary to pair values from the Roman alphabet to Morse code 
