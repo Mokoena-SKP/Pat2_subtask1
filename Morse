@@ -19,3 +19,6 @@ int main() {
         ".---","-.-",".-..","--","-.","---",".--.","--.-",".-.",
         "...","-","..-","...-",".--","-..-","-.--","--.."
     };
+
+    string input, fullMorse = "";
+    getline(cin, input); // Accept full input line from user
