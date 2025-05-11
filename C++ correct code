@@ -1,0 +1,42 @@
+#include <iostream>  //Mokoena SKP //9503215085089
+#include <iomanip> // Required for fixed-point formatting with setprecision
+
+using namespace std; // 'std' namespace required for standard input/output
+
+const int NUM_EXPERIMENTS = 3;
+const int NUM_READINGS = 3;
+
+int main() { // main returns int by convention and requirement
+    int i, j; // Loop counters for experiments and readings
+    double readingValue, total, average;
+
+    for (i = 1; i <= NUM_EXPERIMENTS; i++) { // Iterates through each experiment
+        total = 0;
+        cout << "\nEXPERIMENT " << i << endl;
+        cout << "============\n";
+
+        for (j = 1; j <= NUM_READINGS; j++) { // Gathers readings for the current experiment
+            cout << "Enter reading " << j << " value: ";
+            cin >> readingValue; // Read individual value into properly declared variable
+            total += readingValue; // Accumulate total for averaging
+        }
+
+        average = total / NUM_READINGS; // Basic average computation
+
+        // Evaluate where the average falls in relation to the defined acceptable range
+        if (average > 200) {
+            cout << "Experiment " << i << " average: "
+                 << fixed << setprecision(2)
+                 << average << " is Above acceptable range\n";
+        } else if (average >= 100 && average <= 200) {
+            cout << "Experiment " << i << " average: "
+                 << fixed << setprecision(2)
+                 << average << " is Within acceptable range\n";
+        } else {
+            cout << "Experiment " << i << " average: "
+                 << fixed << setprecision(2)
+                 << average << " is Below acceptable range\n";
+        }
+    }
+    return 0;
+}
